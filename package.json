@@ -1,0 +1,20 @@
+{
+  "name": "dust-loader",
+  "version": "0.0.1",
+  "description": "Webpack loader for DustJS (LinkedIn)",
+  "author": {
+    "name": "Lewis Barnes"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "loader-utils": "0.2.11"
+  },
+  "peerDependencies": {
+    "dustjs-linkedin": "2.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/lewie9021/dust-loader"
+  },
+  "license": "MIT"
+}
