@@ -6,7 +6,7 @@ A loader for Webpack that compiles Dust templates into JavaScript to be used wit
 
 ### Motivation
 
-I initial looked at the default Dust loader [here](https://github.com/avaly/dust-loader), but unfortunatly, it didn't meet my requirements. I wanted a simple way to control how templates were named and required. In the old loader, requiring templates didn't have much of a purpose. Instead I decided to both register the template and then return the name. This made the require more meaningful as it could be assigned to a variable and used with dust.render.
+I initially looked at the default Dust loader [here](https://github.com/avaly/dust-loader), but unfortunatly it didn't meet my requirements. I wanted a simple way to control how templates were named and required. In the old loader, requiring templates didn't have much of a purpose. Instead I decided to both register the template and then return the name. This made the require more meaningful as it could be assigned to a variable and used with dust.render.
 
 ### Example
 
