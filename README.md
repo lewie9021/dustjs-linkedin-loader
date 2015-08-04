@@ -2,11 +2,11 @@
 
 ---
 
-A loader for Webpack that compiles Dust templates into JavaScript to be used within the Browser.
+A loader for Webpack that compiles Dust templates into JavaScript to be used within the browser.
 
 ### Motivation
 
-I initial looked at the default Dust loader [here](https://github.com/avaly/dust-loader), but unfortunatly, it didn't meet my requirements. I wanted a simple way to control how templates were named and required. In the old loader, requiring templates didn't have much of a purpose. Instead I decided to both register the template and then return the name. This made the require more meaningful as it could be assigned to a variable and useding within dust.render.
+I initial looked at the default Dust loader [here](https://github.com/avaly/dust-loader), but unfortunatly, it didn't meet my requirements. I wanted a simple way to control how templates were named and required. In the old loader, requiring templates didn't have much of a purpose. Instead I decided to both register the template and then return the name. This made the require more meaningful as it could be assigned to a variable and used with dust.render.
 
 ### Example
 
@@ -58,7 +58,7 @@ Dust.render(template, {name: "Lewis Barnes"}, function(err, result) {
 
 ### Options
 
-You can pass options to the loader using the query object or directly within the loader string. By default, the path used by the loader to determine the name of the templates is 'this.resourcePath'. To find out more, click [here]().
+You can pass options to the loader using the query object or directly within the loader string. By default, the path used by the loader to determine the name of the templates is 'this.options.context. More information [here](http://webpack.github.io/docs/loaders.html).
 
 #### Path (String)
 
@@ -66,4 +66,4 @@ This option allows you specify an absolute path to a directory (usually containi
 
 #### Paths (Array)
 
-Similar to the the 'path' option, this instead allows allows you to specify an array of absolute paths to a number of directories (again, usually where your Dust templates are kept). The loader will iterate through the paths provided and find the closest match.
+Similar to the 'path' option, this instead allows you to specify an array of absolute paths to a number of directories (again, usually where your Dust templates are kept). The loader will iterate through the paths provided and find the closest match.
