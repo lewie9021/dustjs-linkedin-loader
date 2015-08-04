@@ -6,11 +6,11 @@ A loader for Webpack that compiles Dust templates into JavaScript to be used wit
 
 ### Motivation
 
-I initially looked at the default Dust loader [here](https://github.com/avaly/dust-loader), but unfortunatly it didn't meet my requirements. I wanted a simple way to control how templates were named and required. In the old loader, requiring templates didn't have much of a purpose. Instead I decided to both register the template and then return the name. This made the require more meaningful as it could be assigned to a variable and used with dust.render.
+I initially looked at the default Dust loader [here](https://github.com/avaly/dust-loader), but unfortunately it didn't meet my requirements. I wanted a simple way to control how templates were named and required. In the old loader, requiring templates didn't have much of a purpose. Instead I decided to both register the template and then return the name. This made the require more meaningful as it could be assigned to a variable and used with dust.render.
 
 ### Example
 
-Below is a simple Webpack configuration (webpack.config.js).
+Below is a simple Webpack configuration file (webpack.config.js).
 
 ```javascript
 var Path = require("path");
@@ -33,7 +33,7 @@ module.exports = {
 };
 ```
 
-The path query property is important as it effects the naming of the template. With the current configuration "./views/example.dust" would resolve to "example". However, if the path property wasn't given, it would instead resolve to "views-example". 
+The path query property is important as it effects the naming of the template. Using the current configuration, "./views/example.dust" would resolve to "example". However, if the path property isn't given, the template name would instead resolve to "views-example". 
 
 **Note**
 
@@ -58,7 +58,7 @@ Dust.render(template, {name: "Lewis Barnes"}, function(err, result) {
 
 ### Options
 
-You can pass options to the loader using the query object or directly within the loader string. By default, the path used by the loader to determine the name of the templates is 'this.options.context. More information [here](http://webpack.github.io/docs/loaders.html).
+You can pass options to the loader using the query object or directly within the loader string. By default, the path used by the loader to determine the name of the templates is 'this.options.context'. More information [here](http://webpack.github.io/docs/loaders.html).
 
 #### Path (String)
 
